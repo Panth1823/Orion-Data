@@ -22,15 +22,9 @@ const Partner = () => {
       <div className="partner-section__inner">
         <div className="partner-section__content">
           <header className="partner-section__header">
-            <h2>
-              Partnership
-              <br />
-              Opportunities
-            </h2>
+            <h2>Partnership Opportunities</h2>
             <p>
-              From data infrastructure to custom AI systems, Orion empowers organizations with
-              <br />
-              secure, intelligent, and future-ready solutions.
+              From data infrastructure to custom AI systems, Orion empowers organizations with secure, intelligent, and future-ready solutions.
             </p>
           </header>
 

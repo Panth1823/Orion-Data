@@ -3,14 +3,16 @@ import { NavLink } from 'react-router-dom'
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="navbar__logo">ORION</div>
+      <NavLink to="/" className="navbar__logo" aria-label="Orion Data Studio home">
+        <img src="/Frame.svg" alt="" className="navbar__logo-mark" />
+        <img src="/Group.svg" alt="Orion Data Studio" className="navbar__logo-type" />
+      </NavLink>
       <ul className="navbar__links">
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/ai">AI</NavLink></li>
         <li><NavLink to="/platform">Platform</NavLink></li>
+        <li><NavLink to="/ai">AI</NavLink></li>
         <li><NavLink to="/industries">Industries</NavLink></li>
-        <li><NavLink to="/contact">Contact</NavLink></li>
       </ul>
+      <NavLink to="/contact" className="navbar__cta">Contact Us</NavLink>
     </nav>
   )
 }

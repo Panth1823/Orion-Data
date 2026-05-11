@@ -21,7 +21,7 @@ a {
   top: 0;
   z-index: 10;
   display: grid;
-  width: min(100%, 1440px);
+  width: 100%;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   margin: 0 auto;
@@ -186,7 +186,7 @@ a {
   height: 372px;
   aspect-ratio: 189 / 101;
   margin: 32px auto 0;
-  object-fit: cover;
+  object-fit: contain;
   mix-blend-mode: lighten;
 }
 
@@ -479,13 +479,13 @@ a {
 .footer-panel__shadow {
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: -45px;
   z-index: 1;
   display: block;
   height: auto;
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.18) 0%,
     rgba(2, 11, 24, 0) 100%
   );
   background-clip: text;
@@ -1190,7 +1190,8 @@ a {
   font-weight: 800;
   line-height: 1;
   text-align: center;
-  box-shadow: 0 8px 14px color-mix(in srgb, var(--stage-accent) 28%, transparent);
+  box-shadow: 0 8px 14px
+    color-mix(in srgb, var(--stage-accent) 28%, transparent);
 }
 
 .ai-outcomes {
@@ -1934,92 +1935,8 @@ a {
   white-space: nowrap;
 }
 
-@media (max-width: 1180px) {
-  .vision-section__inner,
-  .unique-section__inner,
-  .custom-section__inner,
-  .success-section__inner,
-  .ai-journey__inner,
-  .ai-outcomes__inner,
-  .ai-technology__inner,
-  .ai-systems__inner,
-  .platform-stack__inner,
-  .platform-benefits__inner,
-  .platform-fabric__inner,
-  .industries-serve__inner,
-  .industries-transform__inner {
-    padding-right: 80px;
-    padding-left: 80px;
-  }
-
-  .partner-section__inner,
-  .roadmap-section__inner,
-  .session-section__inner {
-    padding-right: 80px;
-    padding-left: 80px;
-  }
-
-  .contact-reach__inner,
-  .contact-footer-panel__inner {
-    width: min(100% - 80px, 1120px);
-  }
-
-  .intro-section__inner {
-    width: min(100% - 80px, 1155px);
-  }
-
-  .unique-section__inner {
-    grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.2fr);
-    gap: 48px;
-  }
-
-  .unique-section__copy br,
-  .unique-card br {
-    display: none;
-  }
-
-  .unique-card {
-    min-height: auto;
-  }
-
-  .success-section__inner {
-    grid-template-columns: minmax(360px, 0.9fr) minmax(0, 1.1fr);
-  }
-
-  .ai-journey__cards,
-  .ai-outcomes__cards {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
-  }
-
-  .platform-benefits__cards {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .contact-reach__cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .ai-systems__inner {
-    grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.2fr);
-    gap: 56px;
-  }
-
-  .partner-section__inner {
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
-    gap: 48px;
-  }
-
-  .partner-section__image {
-    align-self: center;
-    width: 100%;
-    height: min(400px, 42vw);
-    margin-top: 0;
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
+  /* â”€â”€ Navbar â”€â”€ */
   .navbar {
     grid-template-columns: auto 1fr auto;
     gap: 18px;
@@ -2035,12 +1952,32 @@ a {
     justify-self: end;
   }
 
+  /* â”€â”€ Layout inners â”€â”€ */
+  .contact-reach__inner,
+  .contact-footer-panel__inner {
+    width: min(100% - 80px, 1120px);
+  }
+
+  .intro-section__inner {
+    width: min(100% - 80px, 1155px);
+  }
+
+  .unique-section__copy br,
+  .unique-card br {
+    display: none;
+  }
+
+  .unique-card {
+    min-height: auto;
+  }
+
+  /* â”€â”€ Banner â”€â”€ */
   .home-banner {
-    min-height: 780px;
+    padding: 58px 20px;
   }
 
   .home-banner__content {
-    padding-top: 132px;
+    padding-top: 0;
   }
 
   .home-banner h1 {
@@ -2051,6 +1988,7 @@ a {
     width: min(680px, calc(100% - 40px));
   }
 
+  /* â”€â”€ Intro â”€â”€ */
   .intro-section__body {
     grid-template-columns: 1fr;
     gap: 28px;
@@ -2062,6 +2000,7 @@ a {
     max-height: 452px;
   }
 
+  /* â”€â”€ Vision â”€â”€ */
   .vision-section__inner {
     padding: 72px 40px;
   }
@@ -2070,6 +2009,7 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  /* â”€â”€ Unique â”€â”€ */
   .unique-section__inner {
     grid-template-columns: 1fr;
     gap: 42px;
@@ -2084,6 +2024,7 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  /* â”€â”€ Custom â”€â”€ */
   .custom-section__inner {
     padding: 72px 40px;
   }
@@ -2092,10 +2033,15 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  /* â”€â”€ Success â”€â”€ */
   .success-section__inner {
     grid-template-columns: 1fr;
     height: auto;
     padding: 72px 40px;
+  }
+
+  .success-section {
+    height: auto;
   }
 
   .success-collage {
@@ -2107,16 +2053,17 @@ a {
     height: 280px;
   }
 
-  .success-section {
-    height: auto;
-  }
-
   .success-panel__header h2 {
     font-size: 44px;
   }
 
+  /* â”€â”€ Contact â”€â”€ */
   .contact-form-section__header h1 {
     font-size: 52px;
+  }
+
+  .contact-reach__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .contact-footer-panel__nav {
@@ -2124,6 +2071,7 @@ a {
     gap: 24px 40px;
   }
 
+  /* â”€â”€ Partner â”€â”€ */
   .partner-section__inner {
     grid-template-columns: 1fr;
     gap: 42px;
@@ -2136,6 +2084,7 @@ a {
   }
 
   .partner-section__image {
+    align-self: center;
     width: 100%;
     height: 360px;
     margin-top: 0;
@@ -2144,49 +2093,10 @@ a {
     order: -1;
   }
 
+  /* â”€â”€ Roadmap / Session â”€â”€ */
   .roadmap-section__inner,
   .session-section__inner {
     padding: 72px 40px;
-  }
-
-  .ai-journey__inner {
-    padding: 72px 40px 84px;
-  }
-
-  .ai-outcomes__inner {
-    padding: 72px 40px;
-  }
-
-  .ai-technology__inner {
-    padding: 72px 40px;
-  }
-
-  .ai-systems__inner {
-    grid-template-columns: 1fr;
-    gap: 42px;
-    padding: 72px 40px;
-  }
-
-  .platform-stack__inner,
-  .platform-fabric__inner {
-    padding: 72px 40px;
-  }
-
-  .industries-serve__inner,
-  .industries-transform__inner {
-    padding: 72px 40px;
-  }
-
-  .platform-benefits__inner {
-    padding: 72px 40px;
-  }
-
-  .ai-systems__header {
-    max-width: 620px;
-  }
-
-  .ai-journey__header {
-    margin-bottom: 66px;
   }
 
   .roadmap-section__cards,
@@ -2199,6 +2109,60 @@ a {
     min-height: auto;
   }
 
+  /* â”€â”€ AI â”€â”€ */
+  .ai-journey__inner {
+    padding: 72px 40px 84px;
+  }
+
+  .ai-journey__header {
+    margin-bottom: 66px;
+  }
+
+  .ai-outcomes__inner {
+    padding: 72px 40px;
+  }
+
+  .ai-technology__inner {
+    padding: 72px 40px;
+  }
+
+  .ai-journey__cards,
+  .ai-outcomes__cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .ai-systems__inner {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding: 72px 40px;
+  }
+
+  .ai-systems__header {
+    max-width: 620px;
+  }
+
+  /* â”€â”€ Platform â”€â”€ */
+  .platform-stack__inner,
+  .platform-fabric__inner {
+    padding: 72px 40px;
+  }
+
+  .platform-benefits__inner {
+    padding: 72px 40px;
+  }
+
+  .platform-benefits__cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* â”€â”€ Industries â”€â”€ */
+  .industries-serve__inner,
+  .industries-transform__inner {
+    padding: 72px 40px;
+  }
+
+  /* â”€â”€ Footer â”€â”€ */
   .footer-cta {
     min-height: 320px;
     padding: 72px 40px 104px;
@@ -2211,11 +2175,12 @@ a {
 
   .footer-panel__nav {
     flex-wrap: wrap;
-    gap: 24px 36px;
+    justify-content: center;
+    gap: 16px 28px;
   }
 
   .footer-panel__meta {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr auto 1fr;
     justify-items: center;
     gap: 20px;
     text-align: center;
@@ -2226,16 +2191,17 @@ a {
   }
 
   .footer-panel__shadow {
-    bottom: -78px;
+    bottom: -20px;
     font-size: 170px;
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
+  /* â”€â”€ Navbar â”€â”€ */
   .navbar {
     grid-template-columns: 1fr auto;
     gap: 16px;
-    padding: 18px;
+    padding: 18px 16px;
   }
 
   .navbar__toggle {
@@ -2281,14 +2247,14 @@ a {
   .navbar__menu {
     position: absolute;
     top: 70px;
-    right: 18px;
-    left: 18px;
+    right: 0;
+    left: 0;
     z-index: 11;
     display: grid;
-    gap: 12px;
-    padding: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 8px;
+    gap: 0;
+    padding: 8px 0 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0;
     background: #020a17;
     box-shadow: 0 18px 38px rgba(0, 0, 0, 0.34);
     opacity: 0;
@@ -2310,104 +2276,49 @@ a {
     gap: 0;
     color: #f8fafc;
     font-size: 16px;
+    justify-content: stretch;
+    justify-items: stretch;
+  }
+
+  .navbar__links li {
+    display: block;
+    list-style: none;
+    width: 100%;
   }
 
   .navbar__links a {
     display: flex;
-    min-height: 42px;
+    width: 100%;
+    min-height: 46px;
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 0 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    padding: 0 20px;
     background: transparent;
+    text-align: left;
   }
 
   .navbar__links a.active {
     color: #f69e7c;
-    background: transparent;
+    background: rgba(246, 158, 124, 0.05);
   }
 
   .navbar__cta {
     justify-self: stretch;
-    min-height: 42px;
-    margin-top: 4px;
+    min-height: 44px;
+    margin: 10px 20px 4px;
   }
 
+  /* â”€â”€ Banner â”€â”€ */
   .home-banner {
-    min-height: 760px;
-  }
-
-  .home-banner__content {
-    width: min(100% - 32px, 560px);
-    padding-top: 132px;
-  }
-
-  .home-banner h1 {
-    font-size: 44px;
-  }
-
-  .intro-section__header h2,
-  .vision-section__header h2,
-  .unique-section__copy h2,
-  .custom-section__header h2,
-  .success-panel__header h2,
-  .partner-section__header h2,
-  .roadmap-section__header h2,
-  .session-section__header h2,
-  .ai-journey__header h2,
-  .ai-outcomes__header h2,
-  .ai-technology__header h2,
-  .ai-systems__header h2,
-  .platform-stack__header h2,
-  .platform-benefits__header h2,
-  .platform-fabric__header h2,
-  .industries-serve__header h2,
-  .industries-transform__header h2 {
-    font-size: 42px;
-  }
-
-  .success-collage {
-    grid-template-columns: 1fr;
-  }
-
-  .success-collage__image--large {
-    grid-column: auto;
-  }
-
-  .contact-footer-panel__meta {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 20px;
-    text-align: center;
-  }
-
-  .contact-footer-panel__meta p:last-child {
-    justify-self: center;
-  }
-
-  .ai-journey__cards,
-  .ai-outcomes__cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 560px) {
-  .navbar {
-    gap: 16px;
-    padding: 18px 16px;
-  }
-
-  .navbar__menu {
-    right: 16px;
-    left: 16px;
-  }
-
-  .home-banner {
-    min-height: 760px;
+    min-height: 100svh;
+    padding: 60px 20px 48px;
+    justify-content: center;
+    gap: 50px;
   }
 
   .home-banner__content {
     width: min(100% - 28px, 430px);
-    padding-top: 178px;
+    padding-top: 0;
   }
 
   .home-banner h1 {
@@ -2425,79 +2336,28 @@ a {
     margin-top: 28px;
   }
 
-  .contact-form-section__inner {
-    width: min(100% - 40px, 560px);
-    padding: 58px 0 84px;
-  }
-
-  .contact-form-section__header {
-    margin-bottom: 44px;
-  }
-
-  .contact-form-section__header h1 {
+  /* â”€â”€ Section headers â”€â”€ */
+  .intro-section__header h2,
+  .vision-section__header h2,
+  .unique-section__copy h2,
+  .custom-section__header h2,
+  .success-panel__header h2,
+  .partner-section__header h2,
+  .roadmap-section__header h2,
+  .session-section__header h2,
+  .ai-journey__header h2,
+  .ai-outcomes__header h2,
+  .ai-technology__header h2,
+  .ai-systems__header h2,
+  .platform-stack__header h2,
+  .platform-benefits__header h2,
+  .platform-fabric__header h2,
+  .industries-serve__header h2,
+  .industries-transform__header h2 {
     font-size: 40px;
   }
 
-  .contact-form-section__header p {
-    font-size: 16px;
-  }
-
-  .contact-form__row {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-reach__inner {
-    width: min(100% - 40px, 1120px);
-    padding: 58px 0 104px;
-  }
-
-  .contact-reach__header {
-    margin-bottom: 34px;
-  }
-
-  .contact-reach__header h2 {
-    font-size: 40px;
-  }
-
-  .contact-reach__header p {
-    font-size: 16px;
-  }
-
-  .contact-reach__cards {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .contact-footer-panel {
-    min-height: 430px;
-    border-radius: 34px 34px 0 0;
-  }
-
-  .contact-footer-panel__mark {
-    top: -32px;
-    width: 66px;
-    height: 66px;
-  }
-
-  .contact-footer-panel__inner {
-    width: min(100% - 40px, 1120px);
-    padding-top: 54px;
-  }
-
-  .contact-footer-panel__brand {
-    width: 132px;
-    margin-bottom: 34px;
-  }
-
-  .contact-footer-panel__nav {
-    gap: 18px 24px;
-  }
-
-  .contact-footer-panel__shadow {
-    bottom: -36px;
-    font-size: 92px;
-  }
-
+  /* â”€â”€ Line break cleanup â”€â”€ */
   .custom-section__header br,
   .partner-section__header br,
   .unique-section__copy br,
@@ -2510,6 +2370,7 @@ a {
     display: none;
   }
 
+  /* â”€â”€ Intro â”€â”€ */
   .intro-section__inner {
     width: min(100% - 28px, 1155px);
     padding: 58px 0 64px;
@@ -2551,6 +2412,7 @@ a {
     font-size: 23px;
   }
 
+  /* â”€â”€ Vision â”€â”€ */
   .vision-section__inner {
     padding: 58px 20px;
     gap: 36px;
@@ -2578,6 +2440,7 @@ a {
     font-size: 23px;
   }
 
+  /* â”€â”€ Unique â”€â”€ */
   .unique-section__inner {
     gap: 34px;
     padding: 58px 20px;
@@ -2610,6 +2473,7 @@ a {
     font-size: 23px;
   }
 
+  /* â”€â”€ Custom â”€â”€ */
   .custom-section__inner {
     padding: 58px 20px;
   }
@@ -2644,13 +2508,22 @@ a {
     font-size: 23px;
   }
 
+  /* â”€â”€ Success â”€â”€ */
   .success-section__inner {
     padding: 58px 20px;
+  }
+
+  .success-collage {
+    grid-template-columns: 1fr;
   }
 
   .success-collage__image,
   .success-collage__image--large {
     height: 220px;
+  }
+
+  .success-collage__image--large {
+    grid-column: auto;
   }
 
   .success-panel {
@@ -2674,6 +2547,7 @@ a {
     font-size: 24px;
   }
 
+  /* â”€â”€ Partner â”€â”€ */
   .partner-section__inner {
     gap: 34px;
     padding: 58px 20px;
@@ -2684,7 +2558,7 @@ a {
     width: 100%;
     height: 260px;
     max-height: 320px;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   .partner-section__header {
@@ -2704,11 +2578,49 @@ a {
     font-size: 23px;
   }
 
+  /* â”€â”€ Roadmap / Session â”€â”€ */
   .roadmap-section__inner,
   .session-section__inner {
     padding: 58px 20px;
   }
 
+  .roadmap-section__header,
+  .session-section__header {
+    margin-bottom: 34px;
+  }
+
+  .roadmap-section__cards,
+  .session-section__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .roadmap-section__header h2,
+  .session-section__header h2 {
+    font-size: 40px;
+  }
+
+  .roadmap-section__header p,
+  .session-section__header p,
+  .roadmap-card p,
+  .session-card p {
+    font-size: 16px;
+  }
+
+  .roadmap-card,
+  .session-card {
+    padding: 22px;
+  }
+
+  .roadmap-card__image {
+    height: 190px;
+  }
+
+  .roadmap-card h3,
+  .session-card h3 {
+    font-size: 23px;
+  }
+
+  /* â”€â”€ AI â”€â”€ */
   .ai-journey__inner,
   .ai-outcomes__inner,
   .ai-technology__inner,
@@ -2800,6 +2712,7 @@ a {
     font-size: 16px;
   }
 
+  /* â”€â”€ Platform â”€â”€ */
   .platform-benefits__cards {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -2809,42 +2722,92 @@ a {
     min-height: 142px;
   }
 
-  .roadmap-section__header,
-  .session-section__header {
-    margin-bottom: 34px;
+  /* â”€â”€ Contact â”€â”€ */
+  .contact-form-section__inner {
+    width: min(100% - 40px, 560px);
+    padding: 58px 0 84px;
   }
 
-  .roadmap-section__cards,
-  .session-section__cards {
-    grid-template-columns: 1fr;
+  .contact-form-section__header {
+    margin-bottom: 44px;
   }
 
-  .roadmap-section__header h2,
-  .session-section__header h2 {
+  .contact-form-section__header h1 {
     font-size: 40px;
   }
 
-  .roadmap-section__header p,
-  .session-section__header p,
-  .roadmap-card p,
-  .session-card p {
+  .contact-form-section__header p {
     font-size: 16px;
   }
 
-  .roadmap-card,
-  .session-card {
-    padding: 22px;
+  .contact-form__row {
+    grid-template-columns: 1fr;
   }
 
-  .roadmap-card__image {
-    height: 190px;
+  .contact-reach__inner {
+    width: min(100% - 40px, 1120px);
+    padding: 58px 0 104px;
   }
 
-  .roadmap-card h3,
-  .session-card h3 {
-    font-size: 23px;
+  .contact-reach__header {
+    margin-bottom: 34px;
   }
 
+  .contact-reach__header h2 {
+    font-size: 40px;
+  }
+
+  .contact-reach__header p {
+    font-size: 16px;
+  }
+
+  .contact-reach__cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contact-footer-panel {
+    min-height: 430px;
+    border-radius: 34px 34px 0 0;
+  }
+
+  .contact-footer-panel__mark {
+    top: -32px;
+    width: 66px;
+    height: 66px;
+  }
+
+  .contact-footer-panel__inner {
+    width: min(100% - 40px, 1120px);
+    padding-top: 54px;
+  }
+
+  .contact-footer-panel__brand {
+    width: 132px;
+    margin-bottom: 34px;
+  }
+
+  .contact-footer-panel__nav {
+    gap: 18px 24px;
+  }
+
+  .contact-footer-panel__meta {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .contact-footer-panel__meta p:last-child {
+    justify-self: center;
+  }
+
+  .contact-footer-panel__shadow {
+    bottom: -36px;
+    font-size: 92px;
+  }
+
+  /* â”€â”€ Footer â”€â”€ */
   .footer-cta {
     min-height: 300px;
     padding: 58px 20px 96px;
@@ -2878,17 +2841,29 @@ a {
   }
 
   .footer-panel__nav {
-    gap: 18px 24px;
-    font-size: 16px;
+    gap: 14px 20px;
+    font-size: 15px;
+  }
+
+  .footer-panel__meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .footer-panel__meta p:last-child {
+    text-align: center;
   }
 
   .footer-panel__shadow {
-    bottom: -36px;
+    bottom: -15px;
     font-size: 92px;
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 480px) {
   .home-banner h1 {
     font-size: 35px;
   }
@@ -2928,6 +2903,14 @@ a {
 
   .footer-panel__nav {
     gap: 14px 18px;
+  }
+
+  .footer-panel__inner {
+    padding-bottom: 110px;
+  }
+
+  .footer-panel__meta {
+    margin-top: 8px;
   }
 
   .contact-footer-panel__nav {

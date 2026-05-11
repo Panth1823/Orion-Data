@@ -1,7 +1,7 @@
 import Banner from "./Home/Banner";
 import Serve from "./Industries/Serve";
 import Transform from "./Industries/Transform";
-import industriesImage from "../assets/Banner/Home_banner.png";
+import industriesImage from "../assets/Banner/Industries.png";
 
 const Industries = () => {
   return (

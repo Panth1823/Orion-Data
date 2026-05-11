@@ -2,7 +2,7 @@ import Banner from "./Home/Banner";
 import Stack from "./Platform/Stack";
 import Benefits from "./Platform/Benefits";
 import Fabric from "./Platform/Fabric";
-import platformImage from "../assets/Banner/Home_banner.png";
+import platformImage from "../assets/Banner/Plaform.png";
 
 const Platform = () => {
   return (

@@ -3,7 +3,7 @@ import Journey from "./AI/Journey";
 import Outcomes from "./AI/Outcomes";
 import Technology from "./AI/Technology";
 import Systems from "./AI/Systems";
-import aiImage from "../assets/Banner/Home_banner.png";
+import aiImage from "../assets/Banner/AI.png";
 
 const AI = () => {
   return (

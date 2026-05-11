@@ -1,29 +1,45 @@
-import { NavLink } from 'react-router-dom'
-import { useState } from 'react'
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 const navLinks = [
-  { label: 'Home', to: '/' },
-  { label: 'Platform', to: '/platform' },
-  { label: 'AI', to: '/ai' },
-  { label: 'Industries', to: '/industries' },
-]
+  { label: "Home", to: "/" },
+  { label: "Platform", to: "/platform" },
+  { label: "AI", to: "/ai" },
+  { label: "Industries", to: "/industries" },
+];
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const closeMenu = () => setMenuOpen(false)
+  const closeMenu = () => setMenuOpen(false);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <nav className="navbar">
-      <NavLink to="/" className="navbar__logo" aria-label="Orion Data Studio home" onClick={closeMenu}>
+      <NavLink
+        to="/"
+        className="navbar__logo"
+        aria-label="Orion Data Studio home"
+        onClick={() => {
+          closeMenu();
+          scrollToTop();
+        }}
+      >
         <img src="/Frame.svg" alt="" className="navbar__logo-mark" />
-        <img src="/Group.svg" alt="Orion Data Studio" className="navbar__logo-type" />
+        <img
+          src="/Group.svg"
+          alt="Orion Data Studio"
+          className="navbar__logo-type"
+        />
       </NavLink>
 
       <button
-        className={`navbar__toggle ${menuOpen ? 'navbar__toggle--open' : ''}`}
+        className={`navbar__toggle ${menuOpen ? "navbar__toggle--open" : ""}`}
         type="button"
-        aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+        aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
         aria-expanded={menuOpen}
         onClick={() => setMenuOpen((isOpen) => !isOpen)}
       >
@@ -32,7 +48,7 @@ const Navbar = () => {
         <span />
       </button>
 
-      <div className={`navbar__menu ${menuOpen ? 'navbar__menu--open' : ''}`}>
+      <div className={`navbar__menu ${menuOpen ? "navbar__menu--open" : ""}`}>
         <ul className="navbar__links">
           {navLinks.map((link) => (
             <li key={link.to}>
@@ -42,10 +58,12 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <NavLink to="/contact" className="navbar__cta" onClick={closeMenu}>Contact Us</NavLink>
+        <NavLink to="/contact" className="navbar__cta" onClick={closeMenu}>
+          Contact Us
+        </NavLink>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

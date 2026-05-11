@@ -1034,7 +1034,7 @@ a {
 .ai-journey {
   background: #fff;
   color: #111318;
-  font-family: Manrope, Inter, system-ui, sans-serif;
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
 }
 
 .ai-journey__inner {
@@ -1245,7 +1245,7 @@ a {
 .ai-systems {
   background: #fff;
   color: #111318;
-  font-family: Manrope, Inter, system-ui, sans-serif;
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
 }
 
 .ai-technology__inner {
@@ -1351,6 +1351,130 @@ a {
   margin-bottom: 15px;
 }
 
+.platform-stack,
+.platform-fabric {
+  background: #fff;
+  color: #111318;
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+}
+
+.platform-stack__inner,
+.platform-fabric__inner {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 82px 148px 88px;
+}
+
+.platform-stack__header,
+.platform-fabric__header {
+  margin-bottom: 62px;
+}
+
+.platform-stack__header h2,
+.platform-fabric__header h2 {
+  margin: 0 0 9px;
+  color: #111318;
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: 0;
+}
+
+.platform-stack__header p,
+.platform-fabric__header p {
+  margin: 0;
+  color: #4f5055;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.platform-stack__image,
+.platform-fabric__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.platform-benefits {
+  background: #020a17;
+  color: #f8fafc;
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+}
+
+.platform-benefits__inner {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 80px 148px 78px;
+}
+
+.platform-benefits__header {
+  margin-bottom: 58px;
+}
+
+.platform-benefits__header h2 {
+  margin: 0 0 10px;
+  color: #f8fafc;
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: 0;
+}
+
+.platform-benefits__header p {
+  margin: 0;
+  max-width: 640px;
+  color: rgba(248, 250, 252, 0.68);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.platform-benefits__cards {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.platform-benefit-card {
+  display: flex;
+  min-height: 157px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  border: 1px solid rgba(246, 158, 124, 0.28);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.045);
+  padding: 22px 18px 18px;
+  text-align: center;
+}
+
+.platform-benefit-card__icon {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: #f8fafc;
+}
+
+.platform-benefit-card h3 {
+  margin: 0 0 24px;
+  color: #f8fafc;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.platform-benefit-card p {
+  margin: auto 0 0;
+  color: #f8fafc;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
 @media (max-width: 1180px) {
   .vision-section__inner,
   .unique-section__inner,
@@ -1359,7 +1483,10 @@ a {
   .ai-journey__inner,
   .ai-outcomes__inner,
   .ai-technology__inner,
-  .ai-systems__inner {
+  .ai-systems__inner,
+  .platform-stack__inner,
+  .platform-benefits__inner,
+  .platform-fabric__inner {
     padding-right: 80px;
     padding-left: 80px;
   }
@@ -1397,6 +1524,10 @@ a {
   .ai-outcomes__cards {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 22px;
+  }
+
+  .platform-benefits__cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .ai-systems__inner {
@@ -1554,6 +1685,15 @@ a {
   .ai-systems__inner {
     grid-template-columns: 1fr;
     gap: 42px;
+    padding: 72px 40px;
+  }
+
+  .platform-stack__inner,
+  .platform-fabric__inner {
+    padding: 72px 40px;
+  }
+
+  .platform-benefits__inner {
     padding: 72px 40px;
   }
 
@@ -1732,7 +1872,10 @@ a {
   .ai-journey__header h2,
   .ai-outcomes__header h2,
   .ai-technology__header h2,
-  .ai-systems__header h2 {
+  .ai-systems__header h2,
+  .platform-stack__header h2,
+  .platform-benefits__header h2,
+  .platform-fabric__header h2 {
     font-size: 42px;
   }
 
@@ -1999,27 +2142,39 @@ a {
   .ai-journey__inner,
   .ai-outcomes__inner,
   .ai-technology__inner,
-  .ai-systems__inner {
+  .ai-systems__inner,
+  .platform-stack__inner,
+  .platform-benefits__inner,
+  .platform-fabric__inner {
     padding: 58px 20px;
   }
 
   .ai-journey__header,
   .ai-outcomes__header,
-  .ai-technology__header {
+  .ai-technology__header,
+  .platform-stack__header,
+  .platform-benefits__header,
+  .platform-fabric__header {
     margin-bottom: 38px;
   }
 
   .ai-journey__header h2,
   .ai-outcomes__header h2,
   .ai-technology__header h2,
-  .ai-systems__header h2 {
+  .ai-systems__header h2,
+  .platform-stack__header h2,
+  .platform-benefits__header h2,
+  .platform-fabric__header h2 {
     font-size: 40px;
   }
 
   .ai-journey__header p,
   .ai-outcomes__header p,
   .ai-technology__header p,
-  .ai-systems__header p {
+  .ai-systems__header p,
+  .platform-stack__header p,
+  .platform-benefits__header p,
+  .platform-fabric__header p {
     font-size: 16px;
   }
 
@@ -2065,6 +2220,15 @@ a {
 
   .ai-system-card p {
     font-size: 16px;
+  }
+
+  .platform-benefits__cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .platform-benefit-card {
+    min-height: 142px;
   }
 
   .roadmap-section__header,
@@ -2166,6 +2330,9 @@ a {
   .ai-outcomes__header h2,
   .ai-technology__header h2,
   .ai-systems__header h2,
+  .platform-stack__header h2,
+  .platform-benefits__header h2,
+  .platform-fabric__header h2,
   .footer-cta h2 {
     font-size: 34px;
   }

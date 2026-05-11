@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
 
 const navLinks = [
+  { label: 'Home', to: '/' },
   { label: 'Platform', to: '/platform' },
   { label: 'AI', to: '/ai' },
   { label: 'Industries', to: '/industries' },

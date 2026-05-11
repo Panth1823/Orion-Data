@@ -17,16 +17,16 @@ a {
 }
 
 .navbar {
-  position: absolute;
+  position: sticky;
   top: 0;
-  left: 50%;
   z-index: 10;
   display: grid;
   width: min(100%, 1440px);
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  padding: 18px 151px 0;
-  transform: translateX(-50%);
+  margin: 0 auto;
+  padding: 18px 151px;
+  background: #020a17;
 }
 
 .navbar__logo {
@@ -1475,6 +1475,465 @@ a {
   line-height: 1.25;
 }
 
+.industries-serve,
+.industries-transform {
+  background: #fff;
+  color: #111318;
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+}
+
+.industries-serve__inner,
+.industries-transform__inner {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 82px 148px 92px;
+}
+
+.industries-serve__header,
+.industries-transform__header {
+  margin-bottom: 58px;
+}
+
+.industries-serve__header h2,
+.industries-transform__header h2 {
+  margin: 0 0 9px;
+  color: #111318;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
+.industries-serve__header p,
+.industries-transform__header p {
+  max-width: 660px;
+  margin: 0;
+  color: #4f5055;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.industries-serve__image,
+.industries-transform__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.contact-page {
+  background: #fff;
+}
+
+.contact-form-section {
+  position: relative;
+  overflow: hidden;
+  background: #020a17;
+  color: #f8fafc;
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+}
+
+.contact-form-section::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    radial-gradient(
+      circle at 50% 54%,
+      rgba(8, 64, 123, 0.48) 0,
+      rgba(8, 64, 123, 0.18) 21%,
+      transparent 43%
+    ),
+    radial-gradient(
+      circle at 48% 46%,
+      rgba(18, 79, 135, 0.2) 0,
+      transparent 38%
+    );
+  pointer-events: none;
+}
+
+.contact-form-section__inner {
+  position: relative;
+  z-index: 1;
+  width: min(820px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 72px 0 124px;
+}
+
+.contact-form-section__header {
+  margin-bottom: 72px;
+  text-align: center;
+}
+
+.contact-form-section__header h1 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+.contact-form-section__header h1 span {
+  display: block;
+  color: #f69e7c;
+}
+
+.contact-form-section__header p {
+  width: min(720px, 100%);
+  margin: 10px auto 0;
+  color: rgba(248, 250, 252, 0.68);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.contact-form {
+  display: grid;
+  gap: 24px;
+}
+
+.contact-form__row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+  color: #f8fafc;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 0;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  outline: 1px solid transparent;
+  transition:
+    background 180ms ease,
+    outline-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.contact-form input {
+  height: 45px;
+  padding: 0 16px;
+}
+
+.contact-form textarea {
+  min-height: 94px;
+  resize: vertical;
+  padding: 15px 16px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(248, 250, 252, 0.58);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: rgba(255, 255, 255, 0.14);
+  outline-color: rgba(246, 158, 124, 0.72);
+  box-shadow: 0 0 0 4px rgba(246, 158, 124, 0.12);
+}
+
+.contact-form button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 7px;
+  background: linear-gradient(180deg, #e85e25 0%, #f69e7c 100%);
+  color: #fff;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 16px 26px rgba(246, 158, 124, 0.32);
+}
+
+.contact-footer {
+  background: #fff;
+  color: #111318;
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+}
+
+.contact-reach__inner {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 74px 0 130px;
+}
+
+.contact-reach__header {
+  margin-bottom: 62px;
+}
+
+.contact-reach__header h2 {
+  margin: 0 0 8px;
+  color: #111318;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
+.contact-reach__header p {
+  max-width: 640px;
+  margin: 0;
+  color: #4f5055;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.contact-reach__cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.contact-reach-card {
+  min-height: 110px;
+  border-radius: 4px;
+  background: #f0f0f0;
+  color: #3a415a;
+  padding: 19px 16px 16px;
+}
+
+.contact-reach-card svg {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.contact-reach-card p {
+  margin: 0 0 6px;
+  color: #4f5055;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.contact-reach-card strong {
+  display: block;
+  color: #111318;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.contact-reach-card__socials {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  color: #737888;
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.contact-reach-card__socials a {
+  display: inline-flex;
+  width: 20px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-reach-card__socials span {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid currentColor;
+  border-radius: 6px;
+}
+
+.contact-reach-card__socials span::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  content: "";
+  transform: translate(-50%, -50%);
+}
+
+.contact-reach-card__socials span::after {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: currentColor;
+  content: "";
+}
+
+.contact-footer-panel {
+  position: relative;
+  min-height: 525px;
+  overflow: visible;
+  border-radius: 72px 72px 0 0;
+  background: #020a17;
+  color: #d7dde8;
+}
+
+.contact-footer-panel__mark {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  z-index: 3;
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+  transform: translateX(-50%);
+}
+
+.contact-footer-panel__inner {
+  position: relative;
+  z-index: 2;
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+.contact-footer-panel__brand {
+  display: block;
+  width: 150px;
+  margin: 0 auto 48px;
+}
+
+.contact-footer-panel__brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.contact-footer-panel__nav {
+  display: flex;
+  justify-content: center;
+  gap: 62px;
+  color: rgba(215, 221, 232, 0.88);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.contact-footer-panel__nav a:hover,
+.contact-footer-panel__nav a.active {
+  color: #f69e7c;
+}
+
+.contact-footer-panel__meta {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin-top: 29px;
+  padding-top: 29px;
+  border-top: 1px solid rgba(215, 221, 232, 0.12);
+  color: rgba(215, 221, 232, 0.55);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.contact-footer-panel__meta p {
+  margin: 0;
+}
+
+.contact-footer-panel__meta p:last-child {
+  justify-self: end;
+}
+
+.contact-footer-panel__socials {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  color: rgba(215, 221, 232, 0.52);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.contact-footer-panel__socials a {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-footer-panel__socials span {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-radius: 5px;
+}
+
+.contact-footer-panel__socials span::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  content: "";
+  transform: translate(-50%, -50%);
+}
+
+.contact-footer-panel__socials span::after {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: currentColor;
+  content: "";
+}
+
+.contact-footer-panel__shadow-wrap {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 210px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.contact-footer-panel__shadow {
+  position: absolute;
+  bottom: -76px;
+  left: 50%;
+  display: block;
+  color: rgba(255, 255, 255, 0.045);
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+  font-size: 306px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
 @media (max-width: 1180px) {
   .vision-section__inner,
   .unique-section__inner,
@@ -1486,7 +1945,9 @@ a {
   .ai-systems__inner,
   .platform-stack__inner,
   .platform-benefits__inner,
-  .platform-fabric__inner {
+  .platform-fabric__inner,
+  .industries-serve__inner,
+  .industries-transform__inner {
     padding-right: 80px;
     padding-left: 80px;
   }
@@ -1496,6 +1957,11 @@ a {
   .session-section__inner {
     padding-right: 80px;
     padding-left: 80px;
+  }
+
+  .contact-reach__inner,
+  .contact-footer-panel__inner {
+    width: min(100% - 80px, 1120px);
   }
 
   .intro-section__inner {
@@ -1530,6 +1996,10 @@ a {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .contact-reach__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .ai-systems__inner {
     grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.2fr);
     gap: 56px;
@@ -1553,7 +2023,7 @@ a {
   .navbar {
     grid-template-columns: auto 1fr auto;
     gap: 18px;
-    padding: 18px 20px 0;
+    padding: 18px 20px;
   }
 
   .navbar__links {
@@ -1645,6 +2115,15 @@ a {
     font-size: 44px;
   }
 
+  .contact-form-section__header h1 {
+    font-size: 52px;
+  }
+
+  .contact-footer-panel__nav {
+    flex-wrap: wrap;
+    gap: 24px 40px;
+  }
+
   .partner-section__inner {
     grid-template-columns: 1fr;
     gap: 42px;
@@ -1690,6 +2169,11 @@ a {
 
   .platform-stack__inner,
   .platform-fabric__inner {
+    padding: 72px 40px;
+  }
+
+  .industries-serve__inner,
+  .industries-transform__inner {
     padding: 72px 40px;
   }
 
@@ -1751,7 +2235,7 @@ a {
   .navbar {
     grid-template-columns: 1fr auto;
     gap: 16px;
-    padding: 18px 18px 0;
+    padding: 18px;
   }
 
   .navbar__toggle {
@@ -1875,7 +2359,9 @@ a {
   .ai-systems__header h2,
   .platform-stack__header h2,
   .platform-benefits__header h2,
-  .platform-fabric__header h2 {
+  .platform-fabric__header h2,
+  .industries-serve__header h2,
+  .industries-transform__header h2 {
     font-size: 42px;
   }
 
@@ -1887,6 +2373,17 @@ a {
     grid-column: auto;
   }
 
+  .contact-footer-panel__meta {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .contact-footer-panel__meta p:last-child {
+    justify-self: center;
+  }
+
   .ai-journey__cards,
   .ai-outcomes__cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1896,7 +2393,7 @@ a {
 @media (max-width: 560px) {
   .navbar {
     gap: 16px;
-    padding: 18px 16px 0;
+    padding: 18px 16px;
   }
 
   .navbar__menu {
@@ -1926,6 +2423,79 @@ a {
     width: min(500px, calc(100% - 16px));
     height: auto;
     margin-top: 28px;
+  }
+
+  .contact-form-section__inner {
+    width: min(100% - 40px, 560px);
+    padding: 58px 0 84px;
+  }
+
+  .contact-form-section__header {
+    margin-bottom: 44px;
+  }
+
+  .contact-form-section__header h1 {
+    font-size: 40px;
+  }
+
+  .contact-form-section__header p {
+    font-size: 16px;
+  }
+
+  .contact-form__row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-reach__inner {
+    width: min(100% - 40px, 1120px);
+    padding: 58px 0 104px;
+  }
+
+  .contact-reach__header {
+    margin-bottom: 34px;
+  }
+
+  .contact-reach__header h2 {
+    font-size: 40px;
+  }
+
+  .contact-reach__header p {
+    font-size: 16px;
+  }
+
+  .contact-reach__cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contact-footer-panel {
+    min-height: 430px;
+    border-radius: 34px 34px 0 0;
+  }
+
+  .contact-footer-panel__mark {
+    top: -32px;
+    width: 66px;
+    height: 66px;
+  }
+
+  .contact-footer-panel__inner {
+    width: min(100% - 40px, 1120px);
+    padding-top: 54px;
+  }
+
+  .contact-footer-panel__brand {
+    width: 132px;
+    margin-bottom: 34px;
+  }
+
+  .contact-footer-panel__nav {
+    gap: 18px 24px;
+  }
+
+  .contact-footer-panel__shadow {
+    bottom: -36px;
+    font-size: 92px;
   }
 
   .custom-section__header br,
@@ -2145,7 +2715,9 @@ a {
   .ai-systems__inner,
   .platform-stack__inner,
   .platform-benefits__inner,
-  .platform-fabric__inner {
+  .platform-fabric__inner,
+  .industries-serve__inner,
+  .industries-transform__inner {
     padding: 58px 20px;
   }
 
@@ -2154,7 +2726,9 @@ a {
   .ai-technology__header,
   .platform-stack__header,
   .platform-benefits__header,
-  .platform-fabric__header {
+  .platform-fabric__header,
+  .industries-serve__header,
+  .industries-transform__header {
     margin-bottom: 38px;
   }
 
@@ -2164,7 +2738,9 @@ a {
   .ai-systems__header h2,
   .platform-stack__header h2,
   .platform-benefits__header h2,
-  .platform-fabric__header h2 {
+  .platform-fabric__header h2,
+  .industries-serve__header h2,
+  .industries-transform__header h2 {
     font-size: 40px;
   }
 
@@ -2174,7 +2750,9 @@ a {
   .ai-systems__header p,
   .platform-stack__header p,
   .platform-benefits__header p,
-  .platform-fabric__header p {
+  .platform-fabric__header p,
+  .industries-serve__header p,
+  .industries-transform__header p {
     font-size: 16px;
   }
 
@@ -2333,6 +2911,8 @@ a {
   .platform-stack__header h2,
   .platform-benefits__header h2,
   .platform-fabric__header h2,
+  .industries-serve__header h2,
+  .industries-transform__header h2,
   .footer-cta h2 {
     font-size: 34px;
   }
@@ -2341,7 +2921,16 @@ a {
     font-size: 33px;
   }
 
+  .contact-form-section__header h1,
+  .contact-reach__header h2 {
+    font-size: 34px;
+  }
+
   .footer-panel__nav {
+    gap: 14px 18px;
+  }
+
+  .contact-footer-panel__nav {
     gap: 14px 18px;
   }
 }

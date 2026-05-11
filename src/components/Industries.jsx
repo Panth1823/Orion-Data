@@ -1,4 +1,6 @@
 import Banner from "./Home/Banner";
+import Serve from "./Industries/Serve";
+import Transform from "./Industries/Transform";
 import industriesImage from "../assets/Banner/Home_banner.png";
 
 const Industries = () => {
@@ -13,6 +15,8 @@ const Industries = () => {
         subtitle="Empowering healthcare, finance, manufacturing, and more with AI-driven solutions."
         image={industriesImage}
       />
+      <Serve />
+      <Transform />
     </main>
   );
 };

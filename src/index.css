@@ -2331,9 +2331,12 @@ a {
   }
 
   .home-banner__visual {
-    width: min(500px, calc(100% - 16px));
+    width: 100%;
     height: auto;
+    aspect-ratio: auto;
     margin-top: 28px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   /* â”€â”€ Section headers â”€â”€ */
@@ -2910,7 +2913,7 @@ a {
   }
 
   .footer-panel__meta {
-    margin-top: 8px;
+    margin-top: 24px;
   }
 
   .contact-footer-panel__nav {

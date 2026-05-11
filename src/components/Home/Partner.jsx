@@ -1,22 +1,24 @@
-import partnerImage from '../../assets/Partner/Image1.png'
+import { useState } from "react";
+import partnerImage from "../../assets/Partner/Image1.png";
 
 const partnerItems = [
   {
-    title: 'Tech Collaborations',
-    copy: 'Strategic partnerships with tech companies lead to shared innovation and the expansion of AI applications across industries.',
-    active: true,
+    title: "Tech Collaborations",
+    copy: "Strategic partnerships with tech companies lead to shared innovation and the expansion of AI applications across industries.",
   },
   {
-    title: 'Research Collaborations',
-    copy: 'Joint ventures with research institutions allow Orion to remain at the forefront of AI advancements and knowledge.',
+    title: "Research Collaborations",
+    copy: "Joint ventures with research institutions allow Orion to remain at the forefront of AI advancements and knowledge.",
   },
   {
-    title: 'Community Initiatives',
-    copy: 'Community initiatives ensure that Orion’s expertise and technologies benefit societal and economic development.',
+    title: "Community Initiatives",
+    copy: "Community initiatives ensure that Orion's expertise and technologies benefit societal and economic development.",
   },
-]
+];
 
 const Partner = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
     <section className="partner-section">
       <div className="partner-section__inner">
@@ -24,13 +26,22 @@ const Partner = () => {
           <header className="partner-section__header">
             <h2>Partnership Opportunities</h2>
             <p>
-              From data infrastructure to custom AI systems, Orion empowers organizations with secure, intelligent, and future-ready solutions.
+              From data infrastructure to custom AI systems, Orion empowers
+              organizations with secure, intelligent, and future-ready
+              solutions.
             </p>
           </header>
 
           <div className="partner-list">
-            {partnerItems.map((item) => (
-              <article className={`partner-item ${item.active ? 'partner-item--active' : ''}`} key={item.title}>
+            {partnerItems.map((item, index) => (
+              <article
+                className={`partner-item ${index === activeIndex ? "partner-item--active" : ""}`}
+                key={item.title}
+                onClick={() => setActiveIndex(index)}
+                role="tab"
+                tabIndex={0}
+                onKeyDown={(e) => e.key === "Enter" && setActiveIndex(index)}
+              >
                 <h3>{item.title}</h3>
                 <p>{item.copy}</p>
               </article>
@@ -38,10 +49,14 @@ const Partner = () => {
           </div>
         </div>
 
-        <img className="partner-section__image" src={partnerImage} alt="Human and robotic hand partnership" />
+        <img
+          className="partner-section__image"
+          src={partnerImage}
+          alt="Human and robotic hand partnership"
+        />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Partner
+export default Partner;

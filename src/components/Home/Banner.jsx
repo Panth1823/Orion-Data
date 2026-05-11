@@ -1,21 +1,23 @@
-const Banner = () => {
+const Banner = ({
+  title,
+  subtitle,
+  image,
+  buttonText = "Get Started",
+  buttonHref = "#get-started",
+}) => {
   return (
     <section className="home-banner">
       <div className="home-banner__content">
-        <h1>
-          Building the Future of
-          <span>AI Data Platforms.</span>
-        </h1>
-        <p>
-          From data infrastructure to custom AI systems, Orion empowers organizations with
-          secure, intelligent, and future-ready solutions.
-        </p>
-        <a className="home-banner__button" href="#get-started">Get Started</a>
+        <h1>{title}</h1>
+        <p>{subtitle}</p>
+        <a className="home-banner__button" href={buttonHref}>
+          {buttonText}
+        </a>
       </div>
 
-      <div className="home-banner__visual" role="img" aria-label="AI data platform analytics visualization" />
+      <img className="home-banner__visual" src={image} alt={title} />
     </section>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;

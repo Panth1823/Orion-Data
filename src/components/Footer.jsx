@@ -1,13 +1,13 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink } from "react-router-dom";
 
 const footerLinks = [
-  { label: 'Home', to: '/' },
-  { label: 'Platform', to: '/platform' },
-  { label: 'AI', to: '/ai' },
-  { label: 'Industries', to: '/industries' },
-  { label: 'Contact', to: '/contact' },
-  { label: 'Privacy', to: '/privacy' },
-]
+  { label: "Home", to: "/" },
+  { label: "Platform", to: "/platform" },
+  { label: "AI", to: "/ai" },
+  { label: "Industries", to: "/industries" },
+  { label: "Contact", to: "/contact" },
+  { label: "Privacy", to: "/privacy" },
+];
 
 const Footer = () => {
   return (
@@ -15,7 +15,8 @@ const Footer = () => {
       <section className="footer-cta" aria-labelledby="footer-cta-title">
         <h2 id="footer-cta-title">Let’s Build Together</h2>
         <p>
-          Partner with our AI specialists to design a solution tailored to your<br/>
+          Partner with our AI specialists to design a solution tailored to your
+          <br />
           business goals from proof-of-concept to full-scale deployment.
         </p>
         <NavLink className="footer-cta__button" to="/contact">
@@ -27,7 +28,11 @@ const Footer = () => {
         <img className="footer-panel__mark" src="/Frame.svg" alt="" />
 
         <div className="footer-panel__inner">
-          <NavLink to="/" className="footer-panel__brand" aria-label="Orion Data Studio home">
+          <NavLink
+            to="/"
+            className="footer-panel__brand"
+            aria-label="Orion Data Studio home"
+          >
             <img src="/Group.svg" alt="Orion Data Studio" />
           </NavLink>
 
@@ -58,12 +63,14 @@ const Footer = () => {
           </div>
         </div>
 
-        <span className="footer-panel__shadow" aria-hidden="true">
-          ORION
-        </span>
+        <div className="footer-panel__shadow-wrap">
+          <span className="footer-panel__shadow" aria-hidden="true">
+            ORION
+          </span>
+        </div>
       </section>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

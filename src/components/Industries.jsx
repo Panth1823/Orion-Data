@@ -1,9 +1,20 @@
+import Banner from "./Home/Banner";
+import industriesImage from "../assets/Banner/Home_banner.png";
+
 const Industries = () => {
   return (
     <main>
-      <h1>Industries</h1>
+      <Banner
+        title={
+          <>
+            Industries<span>We Serve</span>
+          </>
+        }
+        subtitle="Empowering healthcare, finance, manufacturing, and more with AI-driven solutions."
+        image={industriesImage}
+      />
     </main>
-  )
-}
+  );
+};
 
-export default Industries
+export default Industries;

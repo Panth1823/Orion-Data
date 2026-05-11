@@ -5,8 +5,8 @@
 }
 
 body {
-  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background: #020A17;
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background: #020a17;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -69,7 +69,7 @@ a {
 
 .navbar__links a:hover,
 .navbar__links a.active {
-  color: #F69E7C;
+  color: #f69e7c;
 }
 
 .navbar__toggle {
@@ -84,7 +84,7 @@ a {
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  background: linear-gradient(180deg, #E85E25 0%, #F69E7C 100%);
+  background: linear-gradient(180deg, #e85e25 0%, #f69e7c 100%);
   color: #fff;
   font-size: 16px;
   font-weight: 700;
@@ -94,12 +94,17 @@ a {
 
 .home-banner {
   position: relative;
-  width: min(100%, 1440px);
-  min-height: 850px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   overflow: hidden;
-  background: #020A17;
+  background: #020a17;
   color: #fff;
+  padding: 120px 0 60px;
 }
 
 .home-banner::before {
@@ -107,8 +112,17 @@ a {
   inset: 0;
   content: "";
   background:
-    radial-gradient(circle at 50% 66%, rgba(6, 60, 117, 0.52) 0, rgba(6, 60, 117, 0.2) 18%, transparent 39%),
-    radial-gradient(circle at 50% 52%, rgba(22, 90, 149, 0.26) 0, transparent 35%);
+    radial-gradient(
+      circle at 50% 66%,
+      rgba(6, 60, 117, 0.52) 0,
+      rgba(6, 60, 117, 0.2) 18%,
+      transparent 39%
+    ),
+    radial-gradient(
+      circle at 50% 52%,
+      rgba(22, 90, 149, 0.26) 0,
+      transparent 35%
+    );
   pointer-events: none;
 }
 
@@ -117,13 +131,13 @@ a {
   z-index: 1;
   width: min(820px, calc(100% - 40px));
   margin: 0 auto;
-  padding-top: 142px;
+  padding-top: 0;
   text-align: center;
 }
 
 .home-banner h1 {
   margin: 0;
-  color: #F8FAFC;
+  color: #f8fafc;
   font-size: 60px;
   font-weight: 800;
   line-height: 1;
@@ -133,7 +147,7 @@ a {
 .home-banner h1 span {
   display: block;
   margin-top: 6px;
-  color: #F69E7C;
+  color: #f69e7c;
 }
 
 .home-banner p {
@@ -153,47 +167,27 @@ a {
   justify-content: center;
   margin-top: 25px;
   border-radius: 8px;
-  background: linear-gradient(180deg, #E85E25 0%, #F69E7C 100%);
+  background: linear-gradient(180deg, #e85e25 0%, #f69e7c 100%);
   color: #fff;
+  text-align: center;
+  font-family: var(--family-body, Manrope);
   font-size: 16px;
+  font-style: normal;
   font-weight: 700;
-  line-height: 1;
+  line-height: normal;
   box-shadow: 0 14px 24px rgba(246, 158, 124, 0.34);
 }
 
 .home-banner__visual {
+  display: block;
   position: relative;
   z-index: 1;
-  width: min(760px, calc(100% - 40px));
-  height: auto;
-  max-width: calc(100% - 40px);
-  margin: 26px auto 0;
-  aspect-ratio: 760 / 405;
-  background-image: url("./assets/Banner/Image1-orion-cutout.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.home-banner__visual::before {
-  position: absolute;
-  inset: -38px -58px -34px;
-  z-index: -1;
-  content: "";
-  background: radial-gradient(ellipse at center, rgba(7, 49, 104, 0.56) 0%, rgba(4, 27, 65, 0.28) 45%, transparent 74%);
-  filter: blur(18px);
-}
-
-.home-banner__visual::after {
-  position: absolute;
-  inset: 0;
-  content: "";
-  box-shadow:
-    inset 22px 0 30px #020A17,
-    inset -22px 0 30px #020A17,
-    inset 0 12px 22px #020A17,
-    inset 0 -18px 30px #020A17;
-  pointer-events: none;
+  width: 696.103px;
+  height: 372px;
+  aspect-ratio: 189 / 101;
+  margin: 32px auto 0;
+  object-fit: cover;
+  mix-blend-mode: lighten;
 }
 
 .intro-section {
@@ -329,21 +323,19 @@ a {
   border-radius: 6px;
   background: linear-gradient(180deg, #e85e25 0%, #f69e7c 100%);
   color: #fff;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 800;
   line-height: 1;
   box-shadow: 0 14px 24px rgba(232, 94, 37, 0.34);
+  padding: 8px 16px;
 }
 
 .footer-panel {
   position: relative;
-  min-height: 405px;
-  margin-top: -1px;
+  min-height: 581px;
   overflow: visible;
   border-radius: 72px 72px 0 0;
-  background:
-    radial-gradient(ellipse 72% 62% at 32% 72%, rgba(12, 68, 124, 0.22) 0%, rgba(12, 68, 124, 0.12) 34%, rgba(12, 68, 124, 0.04) 58%, rgba(2, 10, 23, 0) 82%),
-    #020a17;
+  background: #020a17;
   color: #d7dde8;
 }
 
@@ -369,7 +361,7 @@ a {
 .footer-panel__brand {
   display: block;
   width: 126px;
-  margin: 0 auto 38px;
+  margin: 0 auto 50px;
 }
 
 .footer-panel__brand img {
@@ -383,7 +375,7 @@ a {
   justify-content: center;
   gap: 52px;
   color: rgba(215, 221, 232, 0.88);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1;
 }
@@ -401,11 +393,11 @@ a {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  margin-top: 26px;
-  padding-top: 20px;
+  margin-top: 24px;
+  padding-top: 24px;
   border-top: 1px solid rgba(215, 221, 232, 0.12);
   color: rgba(215, 221, 232, 0.55);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1;
 }
@@ -433,7 +425,9 @@ a {
   height: 18px;
   align-items: center;
   justify-content: center;
-  transition: color 180ms ease, opacity 180ms ease;
+  transition:
+    color 180ms ease,
+    opacity 180ms ease;
 }
 
 .footer-panel__socials a:hover {
@@ -472,20 +466,35 @@ a {
   content: "";
 }
 
+.footer-panel__shadow-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+  height: 320px;
+}
+
 .footer-panel__shadow {
   position: absolute;
   left: 50%;
-  bottom: -200px;
+  bottom: 0;
   z-index: 1;
   display: block;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(2, 11, 24, 0) 100%);
+  height: auto;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(2, 11, 24, 0) 100%
+  );
   background-clip: text;
   color: transparent;
   font-family: "Space Grotesk", Inter, system-ui, sans-serif;
-  font-size: 240px;
+  font-size: 306px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 1;
   letter-spacing: 0;
   pointer-events: none;
   transform: translateX(-50%);
@@ -495,7 +504,7 @@ a {
 }
 
 .vision-section {
-  background: #020A17;
+  background: #020a17;
   color: #f8fafc;
   font-family: Manrope, Inter, system-ui, sans-serif;
 }
@@ -633,7 +642,7 @@ a {
 .unique-card--dark {
   grid-column: 1 / -1;
   min-height: 183px;
-  background: #020A17;
+  background: #020a17;
 }
 
 .unique-card--dark h3 {
@@ -878,6 +887,8 @@ a {
 .partner-item {
   padding: 27px 0 24px;
   border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .partner-item:first-child {
@@ -896,6 +907,7 @@ a {
   font-weight: 800;
   line-height: 1.14;
   letter-spacing: 0;
+  transition: color 0.3s ease;
 }
 
 .partner-item p {
@@ -905,6 +917,7 @@ a {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.42;
+  transition: color 0.3s ease;
 }
 
 .partner-item--active h3 {
@@ -921,7 +934,7 @@ a {
   width: 475px;
   height: 400px;
   margin-top: 250px;
-  margin-left:60px;
+  margin-left: 60px;
   border-radius: 6px;
   object-fit: cover;
 }
@@ -1263,7 +1276,9 @@ a {
     height: 2px;
     border-radius: 999px;
     background: currentColor;
-    transition: transform 180ms ease, opacity 180ms ease;
+    transition:
+      transform 180ms ease,
+      opacity 180ms ease;
   }
 
   .navbar__toggle--open span:first-child {
@@ -1294,7 +1309,9 @@ a {
     opacity: 0;
     pointer-events: none;
     transform: translateY(-8px);
-    transition: opacity 180ms ease, transform 180ms ease;
+    transition:
+      opacity 180ms ease,
+      transform 180ms ease;
   }
 
   .navbar__menu--open {
@@ -1679,7 +1696,7 @@ a {
 
   .footer-panel__nav {
     gap: 18px 24px;
-    font-size: 13px;
+    font-size: 16px;
   }
 
   .footer-panel__shadow {

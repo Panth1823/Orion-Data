@@ -80,7 +80,7 @@ a {
   justify-self: end;
   display: inline-flex;
   min-width: 112px;
-  min-height: 37px;
+  min-height: 38px;
   align-items: center;
   justify-content: center;
   border-radius: 8px;
@@ -169,7 +169,7 @@ a {
 
 .home-banner__button {
   display: inline-flex;
-  min-width: 116px;
+  min-width: 112px;
   min-height: 38px;
   align-items: center;
   justify-content: center;
@@ -351,11 +351,11 @@ a {
 .footer-cta__button {
   display: inline-flex;
   min-width: 112px;
-  min-height: 37px;
+  min-height: 38px;
   align-items: center;
   justify-content: center;
   margin-top: 33px;
-  border-radius: 6px;
+  border-radius: 8px;
   background: linear-gradient(180deg, #e85e25 0%, #f69e7c 100%);
   color: #fff;
   font-size: 16px;
@@ -999,8 +999,8 @@ a {
   padding: 27px 0 24px;
   border-bottom: 1px solid #e5e5e5;
   cursor: pointer;
-  transition: all 0.3s ease;
-  opacity: 0.4;
+  transition: opacity 0.5s ease 0.1s;
+  opacity: 0.6;
 }
 
 .partner-item--active {
@@ -1018,22 +1018,22 @@ a {
 
 .partner-item h3 {
   margin: 0 0 8px;
-  color: #c2c5cf;
+  color: #3a415a;
   font-size: 28px;
   font-weight: 800;
   line-height: 1.14;
   letter-spacing: 0;
-  transition: color 0.3s ease;
+  transition: opacity 0.5s ease 0.1s;
 }
 
 .partner-item p {
   margin: 0;
   max-width: 430px;
-  color: #96989d;
+  color: #4f5055;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.42;
-  transition: color 0.3s ease;
+  transition: opacity 0.5s ease 0.1s;
 }
 
 .partner-item--active h3 {
@@ -1061,7 +1061,9 @@ a {
   height: 100%;
   border-radius: 6px;
   object-fit: cover;
-  transition: opacity 0.5s ease, transform 0.4s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.4s ease;
   top: 0;
   left: 0;
   opacity: 0;
@@ -1090,7 +1092,9 @@ a {
   border: 0;
   background: #e5e5e5;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
   padding: 0;
 }
 
@@ -1911,11 +1915,12 @@ a {
 
 .contact-form button {
   display: inline-flex;
-  min-height: 46px;
+  min-width: 112px;
+  min-height: 38px;
   align-items: center;
   justify-content: center;
   border: 0;
-  border-radius: 7px;
+  border-radius: 8px;
   background: linear-gradient(180deg, #e85e25 0%, #f69e7c 100%);
   color: #fff;
   font: inherit;
@@ -3239,11 +3244,7 @@ a {
   }
 }
 
-  /* Tablet partner section - hide indicators */
-  .partner-section__indicators {
-    display: none;
-  }
-
-
-
-
+/* Tablet partner section - hide indicators */
+.partner-section__indicators {
+  display: none;
+}

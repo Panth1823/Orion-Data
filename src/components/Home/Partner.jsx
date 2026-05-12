@@ -80,7 +80,7 @@ const Partner = () => {
                 key={item.title}
                 role="tab"
                 tabIndex={0}
-                onClick={() => handleIndexChange(index)}
+                onMouseEnter={() => handleIndexChange(index)}
               >
                 <h3>{item.title}</h3>
                 <p>{item.copy}</p>

@@ -1,4 +1,4 @@
-﻿* {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -453,6 +453,17 @@ a {
   justify-self: end;
 }
 
+.footer-panel__koios-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.footer-panel__koios-link:hover {
+  color: #f69e7c;
+  text-decoration: underline;
+}
+
 .footer-panel__socials {
   display: flex;
   align-items: center;
@@ -828,7 +839,7 @@ a {
 }
 
 .success-section {
-  height: 905px;
+  min-height: 905px;
   background:
     linear-gradient(rgba(2, 10, 23, 0.22), rgba(2, 10, 23, 0.18)),
     url("./assets/Success/Image1.jpg") center / cover no-repeat;
@@ -839,18 +850,17 @@ a {
 .success-section__inner {
   display: grid;
   width: min(1440px, 100%);
-  height: 100%;
   margin: 0 auto;
-  grid-template-columns: 485px minmax(0, 672px);
-  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   align-items: stretch;
-  padding: 36px 160px;
+  padding: 36px 100px;
 }
 
 .success-collage {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: 512px 313px;
+  grid-template-rows: 62% 38%;
   gap: 8px;
   height: 100%;
 }
@@ -858,7 +868,7 @@ a {
 .success-collage__image {
   display: block;
   width: 100%;
-  height: 313px;
+  height: 100%;
   border-radius: 7px;
   object-fit: cover;
   transition: transform 0.4s ease;
@@ -870,14 +880,15 @@ a {
 
 .success-collage__image--large {
   grid-column: 1 / -1;
-  height: 512px;
+  height: 100%;
 }
 
 .success-panel {
   border-radius: 7px;
   background: #fff;
   padding: 41px 41px 44px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .success-panel__header {
@@ -887,9 +898,9 @@ a {
 .success-panel__header h2 {
   margin: 0 0 14px;
   color: #111318;
-  font-size: 54px;
+  font-size: 32px;
   font-weight: 800;
-  line-height: 1.03;
+  line-height: 1.1;
   letter-spacing: 0;
 }
 
@@ -1107,28 +1118,24 @@ a {
   background: #f69e7c;
 }
 
-.roadmap-section,
-.session-section {
+.roadmap-section {
   background: #fff;
   color: #111318;
   font-family: Manrope, Inter, system-ui, sans-serif;
 }
 
-.roadmap-section__inner,
-.session-section__inner {
+.roadmap-section__inner {
   width: min(1440px, 100%);
   margin: 0 auto;
   padding: 80px 148px 76px;
 }
 
-.roadmap-section__header,
-.session-section__header {
+.roadmap-section__header {
   max-width: 620px;
   margin-bottom: 64px;
 }
 
-.roadmap-section__header h2,
-.session-section__header h2 {
+.roadmap-section__header h2 {
   margin: 0 0 8px;
   color: #111318;
   font-size: 50px;
@@ -1137,8 +1144,7 @@ a {
   letter-spacing: 0;
 }
 
-.roadmap-section__header p,
-.session-section__header p {
+.roadmap-section__header p {
   margin: 0;
   color: #4f5055;
   font-size: 16px;
@@ -1146,15 +1152,13 @@ a {
   line-height: 1.35;
 }
 
-.roadmap-section__cards,
-.session-section__cards {
+.roadmap-section__cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
 }
 
-.roadmap-card,
-.session-card {
+.roadmap-card {
   min-height: 387px;
   border-radius: 7px;
   background: #f0f0f0;
@@ -1165,16 +1169,13 @@ a {
   cursor: pointer;
 }
 
-.roadmap-card:hover,
-.session-card:hover {
+.roadmap-card:hover {
   background: #020a17;
   transform: translateY(-4px);
 }
 
 .roadmap-card:hover h3,
-.roadmap-card:hover p,
-.session-card:hover h3,
-.session-card:hover p {
+.roadmap-card:hover p {
   color: #fff;
 }
 
@@ -1192,8 +1193,7 @@ a {
   transform: scale(1.05);
 }
 
-.roadmap-card h3,
-.session-card h3 {
+.roadmap-card h3 {
   margin: 0 0 18px;
   color: #3a415a;
   font-size: 24px;
@@ -1202,23 +1202,12 @@ a {
   letter-spacing: 0;
 }
 
-.roadmap-card p,
-.session-card p {
+.roadmap-card p {
   margin: 0;
   color: #4f5055;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.32;
-}
-
-.session-section__inner {
-  padding-top: 74px;
-  padding-bottom: 108px;
-}
-
-.session-card {
-  min-height: 240px;
-  padding-top: 26px;
 }
 
 .ai-journey {
@@ -1235,6 +1224,7 @@ a {
 
 .ai-journey__header {
   margin-bottom: 100px;
+  text-align: left;
 }
 
 .ai-journey__header h2,
@@ -1257,9 +1247,11 @@ a {
 }
 
 .ai-journey__cards {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 16px;
 }
 
 .ai-stage-card {
@@ -1384,6 +1376,116 @@ a {
     color-mix(in srgb, var(--stage-accent) 28%, transparent);
 }
 
+/* New v2 card style matching Image 1 design */
+.ai-stage-card-v2 {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.ai-stage-card-v2:hover {
+  background: #020a17;
+  border-color: #020a17;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(2, 10, 23, 0.25);
+}
+
+.ai-stage-card-v2:hover .ai-stage-card-v2__title,
+.ai-stage-card-v2:hover .ai-stage-card-v2__capabilities li {
+  color: #f8f9fa;
+}
+
+.ai-stage-card-v2:hover .ai-stage-card-v2__icon {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #f8f9fa;
+}
+
+.ai-stage-card-v2:hover .ai-stage-card-v2__label {
+  background: rgba(255, 87, 34, 0.2);
+  border-color: rgba(255, 87, 34, 0.3);
+}
+
+.ai-stage-card-v2:hover .ai-stage-card-v2__capabilities li svg circle {
+  fill: rgba(255, 255, 255, 0.15);
+}
+
+.ai-stage-card-v2:hover .ai-stage-card-v2__capabilities li svg path {
+  stroke: #4ade80;
+}
+
+.ai-stage-card-v2__icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  margin-bottom: 16px;
+  color: #6c757d;
+}
+
+.ai-stage-card-v2__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.ai-stage-card-v2__label {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 16px;
+  color: #ff5722;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 12px;
+  width: fit-content;
+  text-align: left;
+}
+
+.ai-stage-card-v2__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 20px 0;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.ai-stage-card-v2__capabilities {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ai-stage-card-v2__capabilities li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: #495057;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.ai-stage-card-v2__capabilities li svg {
+  flex-shrink: 0;
+}
+
 .ai-outcomes {
   background: #020a17;
   color: #f8fafc;
@@ -1398,6 +1500,7 @@ a {
 
 .ai-outcomes__header {
   margin-bottom: 68px;
+  text-align: left;
 }
 
 .ai-outcomes__header p {
@@ -1413,8 +1516,8 @@ a {
 .ai-outcome-card {
   display: flex;
   min-height: 172px;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: column;
   border: 1px solid rgba(246, 158, 124, 0.32);
   border-radius: 8px;
@@ -1426,6 +1529,7 @@ a {
     transform 0.3s ease,
     border-color 0.3s ease;
   cursor: pointer;
+  text-align: left;
 }
 
 .ai-outcome-card:hover {
@@ -1443,7 +1547,8 @@ a {
   font-size: 16px;
   font-weight: 800;
   line-height: 1.3;
-  text-align: center;
+  text-align: left;
+  align-self: center;
 }
 
 .ai-technology,
@@ -2221,9 +2326,129 @@ a {
   transform: translateX(-50%);
   white-space: nowrap;
 }
+/* Tablet partner section - hide indicators */
+.partner-section__indicators {
+  display: none;
+}
+
+/* ── Industries Transform ── */
+.industries-transform {
+  background: #fff;
+  color: #111318;
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+}
+
+.industries-transform__inner {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 80px 160px;
+}
+
+.industries-transform__header {
+  margin-bottom: 48px;
+}
+
+.industries-transform__header h2 {
+  margin: 0 0 10px;
+  color: #111318;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.03;
+}
+
+.industries-transform__header p {
+  margin: 0;
+  max-width: 560px;
+  color: #4f5055;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.industries-transform__grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.industries-transform__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 22px 16px 20px;
+  background: #fff;
+  cursor: pointer;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.industries-transform__card:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.09);
+  transform: translateY(-3px);
+  border-color: #d1d5db;
+}
+
+.industries-transform__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-bottom: 14px;
+  flex-shrink: 0;
+}
+
+.industries-transform__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.industries-transform__card h3 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.industries-transform__card p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.industries-transform__bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  border-radius: 2px;
+  margin-top: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-shrink: 0;
+}
 
 @media (max-width: 1024px) {
-  /* Ã¢â€â‚¬Ã¢â€â‚¬ Navbar Ã¢â€â‚¬Ã¢â€â‚¬ */
+  /* — AI Journey — */
+  .ai-journey__cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ai-stage-card-v2 {
+    flex: none;
+    width: 100%;
+  }
+
+  /* — Navbar — */
   .navbar {
     grid-template-columns: auto 1fr auto;
     gap: 18px;
@@ -2261,6 +2486,7 @@ a {
   /* Ã¢â€â‚¬Ã¢â€â‚¬ Banner Ã¢â€â‚¬Ã¢â€â‚¬ */
   .home-banner {
     padding: 58px 20px;
+    justify-content: space-around;
   }
 
   .home-banner__content {
@@ -2272,7 +2498,9 @@ a {
   }
 
   .home-banner__visual {
-    width: min(680px, calc(100% - 40px));
+    width: 100%;
+    object-fit: none;
+    object-position: top;
   }
 
   /* Ã¢â€â‚¬Ã¢â€â‚¬ Intro Ã¢â€â‚¬Ã¢â€â‚¬ */
@@ -2385,19 +2613,16 @@ a {
     height: 100%;
   }
 
-  /* Ã¢â€â‚¬Ã¢â€â‚¬ Roadmap / Session Ã¢â€â‚¬Ã¢â€â‚¬ */
-  .roadmap-section__inner,
-  .session-section__inner {
+  /* Ã¢â€â‚¬Ã¢â€â‚¬ Roadmap Ã¢â€â‚¬Ã¢â€â‚¬ */
+  .roadmap-section__inner {
     padding: 72px 40px;
   }
 
-  .roadmap-section__cards,
-  .session-section__cards {
+  .roadmap-section__cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .roadmap-card,
-  .session-card {
+  .roadmap-card {
     min-height: auto;
   }
 
@@ -2418,7 +2643,11 @@ a {
     padding: 72px 40px;
   }
 
-  .ai-journey__cards,
+  .ai-journey__cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .ai-outcomes__cards {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 22px;
@@ -2486,10 +2715,18 @@ a {
     bottom: -20px;
     font-size: 170px;
   }
+
+  /* ── Industries Transform ── */
+  .industries-transform__inner {
+    padding: 64px 40px;
+  }
+
+  .industries-transform__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 768px) {
-  /* Ã¢â€â‚¬Ã¢â€â‚¬ Navbar Ã¢â€â‚¬Ã¢â€â‚¬ */
   .navbar {
     grid-template-columns: 1fr auto;
     gap: 16px;
@@ -2623,8 +2860,8 @@ a {
   }
 
   .home-banner__visual {
-    width: 100%;
     height: auto;
+    object-fit: contain;
     aspect-ratio: auto;
     margin-top: 28px;
     margin-left: 0;
@@ -2639,7 +2876,6 @@ a {
   .success-panel__header h2,
   .partner-section__header h2,
   .roadmap-section__header h2,
-  .session-section__header h2,
   .ai-journey__header h2,
   .ai-outcomes__header h2,
   .ai-technology__header h2,
@@ -2660,8 +2896,7 @@ a {
   .success-panel__header br,
   .intro-section__header br,
   .vision-section__header br,
-  .roadmap-section__header br,
-  .session-section__header br {
+  .roadmap-section__header br {
     display: none;
   }
 
@@ -2878,36 +3113,29 @@ a {
     font-size: 23px;
   }
 
-  /* Ã¢â€â‚¬Ã¢â€â‚¬ Roadmap / Session Ã¢â€â‚¬Ã¢â€â‚¬ */
-  .roadmap-section__inner,
-  .session-section__inner {
+  /* Ã¢â€â‚¬Ã¢â€â‚¬ Roadmap Ã¢â€â‚¬Ã¢â€â‚¬ */
+  .roadmap-section__inner {
     padding: 58px 20px;
   }
 
-  .roadmap-section__header,
-  .session-section__header {
+  .roadmap-section__header {
     margin-bottom: 34px;
   }
 
-  .roadmap-section__cards,
-  .session-section__cards {
+  .roadmap-section__cards {
     grid-template-columns: 1fr;
   }
 
-  .roadmap-section__header h2,
-  .session-section__header h2 {
+  .roadmap-section__header h2 {
     font-size: 40px;
   }
 
   .roadmap-section__header p,
-  .session-section__header p,
-  .roadmap-card p,
-  .session-card p {
+  .roadmap-card p {
     font-size: 16px;
   }
 
-  .roadmap-card,
-  .session-card {
+  .roadmap-card {
     padding: 22px;
   }
 
@@ -2915,8 +3143,7 @@ a {
     height: 190px;
   }
 
-  .roadmap-card h3,
-  .session-card h3 {
+  .roadmap-card h3 {
     font-size: 23px;
   }
 
@@ -2968,9 +3195,27 @@ a {
     font-size: 16px;
   }
 
-  .ai-journey__cards,
+  .ai-journey__cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .ai-outcomes__cards {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .ai-stage-card-v2 {
+    flex: none;
+    padding: 24px;
+  }
+
+  .ai-stage-card-v2__title {
+    font-size: 20px;
+  }
+
+  .ai-stage-card-v2__capabilities li {
+    font-size: 14px;
   }
 
   .ai-stage-card {
@@ -2984,8 +3229,37 @@ a {
     min-height: 0;
   }
 
+  .ai-stage-card-v2 {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .ai-stage-card-v2__title {
+    font-size: 18px;
+  }
+
+  .ai-stage-card-v2__capabilities li {
+    font-size: 13px;
+  }
+
   .ai-outcome-card {
-    min-height: 154px;
+    min-height: auto;
+    padding: 28px 24px;
+    flex-direction: row;
+    gap: 20px;
+    text-align: left;
+  }
+
+  .ai-outcome-card svg {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .ai-outcome-card h3 {
+    margin: 0;
+    font-size: 18px;
+    align-self: center;
   }
 
   .ai-systems__inner {
@@ -3024,8 +3298,8 @@ a {
 
   /* Ã¢â€â‚¬Ã¢â€â‚¬ Contact Ã¢â€â‚¬Ã¢â€â‚¬ */
   .contact-form-section__inner {
-    width: min(100% - 40px, 560px);
-    padding: 58px 0 84px;
+    width: 100%;
+    padding: 58px 20px 84px;
   }
 
   .contact-form-section__header {
@@ -3161,9 +3435,27 @@ a {
     bottom: -15px;
     font-size: 92px;
   }
+
+  /* ── Industries Transform ── */
+  .industries-transform__inner {
+    padding: 48px 20px;
+  }
+
+  .industries-transform__header h2 {
+    font-size: 36px;
+  }
+
+  .industries-transform__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 480px) {
+  /* ── Industries Transform ── */
+  .industries-transform__grid {
+    grid-template-columns: 1fr;
+  }
+
   .home-banner h1 {
     font-size: 35px;
   }
@@ -3178,7 +3470,6 @@ a {
   .custom-section__header h2,
   .partner-section__header h2,
   .roadmap-section__header h2,
-  .session-section__header h2,
   .ai-journey__header h2,
   .ai-outcomes__header h2,
   .ai-technology__header h2,
@@ -3193,7 +3484,7 @@ a {
   }
 
   .success-panel__header h2 {
-    font-size: 33px;
+    font-size: 30px;
   }
 
   .contact-form-section__header h1,
@@ -3242,9 +3533,4 @@ a {
   .partner-item--active p {
     color: #4f5055;
   }
-}
-
-/* Tablet partner section - hide indicators */
-.partner-section__indicators {
-  display: none;
 }

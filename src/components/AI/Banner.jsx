@@ -15,7 +15,7 @@ const Banner = ({
         </a>
       </div>
 
-      <img className="home-banner__visual" src={image} alt={title} />
+      <img className="home-banner__visual" src={image} alt={title} loading="eager" width="800" height="600" />
     </section>
   );
 };

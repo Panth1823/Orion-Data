@@ -6,13 +6,19 @@ const Serve = () => {
       <div className="industries-serve__inner">
         <header className="industries-serve__header">
           <h2>Industries We Serve</h2>
-          <p>Six progressive stages from descriptive reporting to fully autonomous intelligent systems</p>
+          <p>
+            Six progressive stages from descriptive reporting to fully
+            autonomous intelligent systems
+          </p>
         </header>
 
         <img
           className="industries-serve__image"
           src={serveImage}
           alt="Industry transformation examples for retail, healthcare, financial services, and airline operations"
+          loading="lazy"
+          width="1200"
+          height="600"
         />
       </div>
     </section>

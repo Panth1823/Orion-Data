@@ -20,6 +20,9 @@ const Technology = () => {
           className="ai-technology__image"
           src={technologyImage}
           alt="AI technologies and platforms across Microsoft, Google Cloud, AWS, model providers, and AI capability enablers"
+          loading="lazy"
+          width="1200"
+          height="600"
         />
       </div>
     </section>

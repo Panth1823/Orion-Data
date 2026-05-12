@@ -1,24 +1,24 @@
-import image1 from '../../assets/Custom/Image1.png'
-import image2 from '../../assets/Custom/Image2.png'
-import image3 from '../../assets/Custom/Image3.png'
+import image1 from "../../assets/Custom/Image1.png";
+import image2 from "../../assets/Custom/Image2.png";
+import image3 from "../../assets/Custom/Image3.png";
 
 const customCards = [
   {
     image: image1,
-    title: 'AI Platform Spectrum',
-    copy: 'Our platforms cover a broad spectrum, from natural language processing to advanced predictive analytics, allowing for comprehensive data insights.',
+    title: "AI Platform Spectrum",
+    copy: "Our platforms cover a broad spectrum, from natural language processing to advanced predictive analytics, allowing for comprehensive data insights.",
   },
   {
     image: image2,
-    title: 'Scalability and Flexibility',
-    copy: 'Our platforms cover a broad spectrum, from natural language processing to advanced predictive analytics, allowing for comprehensive data insights.',
+    title: "Scalability and Flexibility",
+    copy: "Our platforms cover a broad spectrum, from natural language processing to advanced predictive analytics, allowing for comprehensive data insights.",
   },
   {
     image: image3,
-    title: 'Secure and Robust Solutions',
-    copy: 'Security and data integrity are at the core of our platform offerings, ensuring robust solutions that clients can trust.',
+    title: "Secure and Robust Solutions",
+    copy: "Security and data integrity are at the core of our platform offerings, ensuring robust solutions that clients can trust.",
   },
-]
+];
 
 const Custom = () => {
   return (
@@ -31,7 +31,8 @@ const Custom = () => {
             Platforms
           </h2>
           <p>
-            From data infrastructure to custom AI systems, Orion empowers organizations with
+            From data infrastructure to custom AI systems, Orion empowers
+            organizations with
             <br />
             secure, intelligent, and future-ready solutions.
           </p>
@@ -40,7 +41,14 @@ const Custom = () => {
         <div className="custom-section__cards">
           {customCards.map((card) => (
             <article className="custom-card" key={card.title}>
-              <img src={card.image} alt="" className="custom-card__image" />
+              <img
+                src={card.image}
+                alt=""
+                className="custom-card__image"
+                loading="lazy"
+                width="400"
+                height="250"
+              />
               <h3>{card.title}</h3>
               <p>{card.copy}</p>
             </article>
@@ -48,7 +56,7 @@ const Custom = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Custom
+export default Custom;

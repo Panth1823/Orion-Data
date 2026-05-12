@@ -1,30 +1,51 @@
-import image2 from '../../assets/Success/Image2.png'
-import image3 from '../../assets/Success/Image3.png'
-import image4 from '../../assets/Success/Image4.png'
+import image2 from "../../assets/Success/Image2.png";
+import image3 from "../../assets/Success/Image3.png";
+import image4 from "../../assets/Success/Image4.png";
 
 const successStories = [
   {
-    title: 'Tech Collaborations',
-    copy: 'Success story with a major retailer demonstrates how Orion solutions increased efficiency and reduced costs through predictive analytics.',
+    title: "Tech Collaborations",
+    copy: "Success story with a major retailer demonstrates how Orion solutions increased efficiency and reduced costs through predictive analytics.",
   },
   {
-    title: 'Healthcare Impact',
-    copy: 'Collaboration with a healthcare provider highlights data-driven diagnostics that improved patient outcomes, showcasing Orion’s impact in health sectors.',
+    title: "Healthcare Impact",
+    copy: "Collaboration with a healthcare provider highlights data-driven diagnostics that improved patient outcomes, showcasing Orion’s impact in health sectors.",
   },
   {
-    title: 'Financial Services Case',
-    copy: 'A partnership with a financial corporation led to enhanced fraud detection and prevention, illustrating Orion’s prowess in financial services.',
+    title: "Financial Services Case",
+    copy: "A partnership with a financial corporation led to enhanced fraud detection and prevention, illustrating Orion’s prowess in financial services.",
   },
-]
+];
 
 const Success = () => {
   return (
     <section className="success-section">
       <div className="success-section__inner">
         <div className="success-collage" aria-label="AI success story visuals">
-          <img className="success-collage__image success-collage__image--large" src={image2} alt="" />
-          <img className="success-collage__image" src={image3} alt="" />
-          <img className="success-collage__image" src={image4} alt="" />
+          <img
+            className="success-collage__image success-collage__image--large"
+            src={image2}
+            alt=""
+            loading="lazy"
+            width="600"
+            height="400"
+          />
+          <img
+            className="success-collage__image"
+            src={image3}
+            alt=""
+            loading="lazy"
+            width="400"
+            height="300"
+          />
+          <img
+            className="success-collage__image"
+            src={image4}
+            alt=""
+            loading="lazy"
+            width="400"
+            height="300"
+          />
         </div>
 
         <article className="success-panel">
@@ -37,7 +58,8 @@ const Success = () => {
             <p>
               From data infrastructure to custom AI systems, Orion empowers
               <br />
-              organizations with secure, intelligent, and future-ready solutions.
+              organizations with secure, intelligent, and future-ready
+              solutions.
             </p>
           </header>
 
@@ -50,14 +72,18 @@ const Success = () => {
             ))}
           </div>
 
-          <a className="success-panel__link" href="#case-studies" aria-label="View more success stories">
+          <a
+            className="success-panel__link"
+            href="#case-studies"
+            aria-label="View more success stories"
+          >
             View More
             <span aria-hidden="true">→</span>
           </a>
         </article>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Success
+export default Success;

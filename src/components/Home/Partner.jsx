@@ -108,6 +108,9 @@ const Partner = () => {
               className={`partner-section__image ${index === activeIndex ? "partner-section__image--visible" : ""}`}
               src={img}
               alt={partnerItems[index]?.title || "Partnership"}
+              loading="lazy"
+              width="600"
+              height="400"
             />
           ))}
         </div>

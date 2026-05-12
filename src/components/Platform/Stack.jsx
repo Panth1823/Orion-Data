@@ -13,6 +13,9 @@ const Stack = () => {
           className="platform-stack__image"
           src={stackImage}
           alt="OpenStack platform architecture diagram"
+          loading="lazy"
+          width="1200"
+          height="675"
         />
       </div>
     </section>

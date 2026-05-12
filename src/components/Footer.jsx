@@ -25,7 +25,14 @@ const Footer = () => {
       </section>
 
       <section className="footer-panel">
-        <img className="footer-panel__mark" src="/Frame.svg" alt="" />
+        <img
+          className="footer-panel__mark"
+          src="/Frame.svg"
+          alt=""
+          loading="lazy"
+          width="120"
+          height="120"
+        />
 
         <div className="footer-panel__inner">
           <NavLink
@@ -33,7 +40,13 @@ const Footer = () => {
             className="footer-panel__brand"
             aria-label="Orion Data Studio home"
           >
-            <img src="/Group.svg" alt="Orion Data Studio" />
+            <img
+              src="/Group.svg"
+              alt="Orion Data Studio"
+              loading="lazy"
+              width="200"
+              height="40"
+            />
           </NavLink>
 
           <nav className="footer-panel__nav" aria-label="Footer navigation">
@@ -59,7 +72,17 @@ const Footer = () => {
               </a>
             </div>
 
-            <p>Crafted by Koiostudios</p>
+            <p>
+              Crafted by{" "}
+              <a
+                className="footer-panel__koios-link"
+                href="https://www.koiostudio.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Koiostudio
+              </a>
+            </p>
           </div>
         </div>
 

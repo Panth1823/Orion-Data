@@ -17,6 +17,9 @@ const Fabric = () => {
           className="platform-fabric__image"
           src={fabricImage}
           alt="Microsoft Fabric data warehouse architecture diagram"
+          loading="lazy"
+          width="1200"
+          height="675"
         />
       </div>
     </section>

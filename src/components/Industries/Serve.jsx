@@ -2,7 +2,7 @@ import serveImage from "../../assets/Industries/Image1.png";
 
 const Serve = () => {
   return (
-    <section className="industries-serve">
+    <section className="industries-serve" id="serve">
       <div className="industries-serve__inner">
         <header className="industries-serve__header">
           <h2>Industries We Serve</h2>

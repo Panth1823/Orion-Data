@@ -3,7 +3,7 @@ const Banner = ({
   subtitle,
   image,
   buttonText = "Get Started",
-  buttonHref = "#get-started",
+  buttonHref = "/contact",
 }) => {
   return (
     <section className="home-banner">

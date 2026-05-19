@@ -874,10 +874,6 @@ a {
   transition: transform 0.4s ease;
 }
 
-.success-collage__image:hover {
-  transform: scale(1.05);
-}
-
 .success-collage__image--large {
   grid-column: 1 / -1;
   height: 100%;

@@ -74,7 +74,7 @@ const Success = () => {
 
           <a
             className="success-panel__link"
-            href="#case-studies"
+            href="/industries#serve"
             aria-label="View more success stories"
           >
             View More

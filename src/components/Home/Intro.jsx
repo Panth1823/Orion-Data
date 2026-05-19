@@ -18,7 +18,7 @@ const introCards = [
 
 const Intro = () => {
   return (
-    <section className="intro-section">
+    <section className="intro-section" id="intro">
       <div className="intro-section__inner">
         <div className="intro-section__header">
           <h2>Introduction to Orion Data Studio</h2>

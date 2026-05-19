@@ -123,7 +123,7 @@ const CheckIcon = () => (
 
 const Journey = () => {
   return (
-    <section className="ai-journey">
+    <section className="ai-journey" id="journey">
       <div className="ai-journey__inner">
         <header className="ai-journey__header">
           <h2>Your AI Journey</h2>

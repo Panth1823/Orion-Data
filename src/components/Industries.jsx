@@ -14,6 +14,7 @@ const Industries = () => {
         }
         subtitle="Empowering healthcare, finance, manufacturing, and more with AI-driven solutions."
         image={industriesImage}
+        buttonHref="#serve"
       />
       <Serve />
       <Transform />

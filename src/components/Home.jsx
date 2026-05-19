@@ -20,6 +20,7 @@ const Home = () => {
         }
         subtitle="From data infrastructure to custom AI systems, Orion empowers organizations with secure, intelligent, and future-ready solutions."
         image={bannerImage}
+        buttonHref="#intro"
       />
       <Intro />
       <Vision />

@@ -28,11 +28,12 @@ const Navbar = () => {
           scrollToTop();
         }}
       >
-        <img src="/Frame.svg" alt="" className="navbar__logo-mark" />
         <img
-          src="/Group.svg"
+          src="/1.svg"
           alt="Orion Data Studio"
-          className="navbar__logo-type"
+          className="navbar__logo-image"
+          width="100%"
+          height="40"
         />
       </NavLink>
 

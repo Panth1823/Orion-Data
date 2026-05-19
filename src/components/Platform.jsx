@@ -15,6 +15,7 @@ const Platform = () => {
         }
         subtitle="Scalable, secure data infrastructure powering the next generation of AI applications."
         image={platformImage}
+        buttonHref="#fabric"
       />
       <Stack />
       <Benefits />

@@ -27,7 +27,7 @@ const Footer = () => {
       <section className="footer-panel">
         <img
           className="footer-panel__mark"
-          src="/Frame.svg"
+          src="/4.png"
           alt=""
           loading="lazy"
           width="120"
@@ -39,15 +39,7 @@ const Footer = () => {
             to="/"
             className="footer-panel__brand"
             aria-label="Orion Data Studio home"
-          >
-            <img
-              src="/Group.svg"
-              alt="Orion Data Studio"
-              loading="lazy"
-              width="200"
-              height="40"
-            />
-          </NavLink>
+          ></NavLink>
 
           <nav className="footer-panel__nav" aria-label="Footer navigation">
             {footerLinks.map((link) => (
@@ -59,18 +51,6 @@ const Footer = () => {
 
           <div className="footer-panel__meta">
             <p>©2026 All Rights Reserved</p>
-
-            <div className="footer-panel__socials" aria-label="Social links">
-              <a href="https://www.facebook.com" aria-label="Facebook">
-                f
-              </a>
-              <a href="https://www.instagram.com" aria-label="Instagram">
-                <span className="footer-panel__instagram" />
-              </a>
-              <a href="https://x.com" aria-label="X">
-                X
-              </a>
-            </div>
 
             <p>
               Crafted by{" "}

@@ -16,6 +16,7 @@ const AI = () => {
         }
         subtitle="From custom AI systems to intelligent automation, Orion delivers cutting-edge solutions."
         image={aiImage}
+        buttonHref="#journey"
       />
       <Journey />
       <Outcomes />

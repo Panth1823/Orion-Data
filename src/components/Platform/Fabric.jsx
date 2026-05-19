@@ -2,7 +2,7 @@ import fabricImage from "../../assets/AI/Technology/Image3.png";
 
 const Fabric = () => {
   return (
-    <section className="platform-fabric">
+    <section className="platform-fabric" id="fabric">
       <div className="platform-fabric__inner">
         <header className="platform-fabric__header">
           <h2>

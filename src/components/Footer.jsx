@@ -27,7 +27,7 @@ const Footer = () => {
       <section className="footer-panel">
         <img
           className="footer-panel__mark"
-          src="/4.png"
+          src="/5.png"
           alt=""
           loading="lazy"
           width="120"
